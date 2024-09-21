@@ -169,7 +169,7 @@
                     <OutArgument x:TypeArguments="x:String">[senderPassword]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">xxx xxx xxx xxx</InArgument>
+                    <InArgument x:TypeArguments="x:String">mncu ieas hkfj gkca</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
               </scg:List>

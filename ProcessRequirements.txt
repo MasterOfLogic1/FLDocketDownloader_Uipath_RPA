@@ -1,0 +1,14 @@
+1.) Go to https://www2.miamidadeclerk.gov/ocs/Search.aspx?
+
+2.)Select Local Case Number Tab
+
+3.) Enter Year, SEQ and Case Code . This can all be extracted from the case numbers found in excel
+
+4.)Click Search
+
+5.) Expand Documents Section
+
+
+6.) Download Required Documents
+
+7.) Go back to search page
