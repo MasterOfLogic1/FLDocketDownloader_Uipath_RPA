@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="ProceedToNewTabDownloadAction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="maxPageLoadTimeInSeconds" Type="InArgument(x:Double)" />
@@ -17,7 +16,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1128.8,2022.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1128.8,2024</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProceedToNewTabDownloadAction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,19 +118,19 @@
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProceedToNewTabDownloadAction" sap:VirtualizedContainerService.HintSize="1110.4,1957.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProceedToNewTabDownloadAction" sap:VirtualizedContainerService.HintSize="1110.4,1959.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Civil, Family and Probate Courts Online System" sap:VirtualizedContainerService.HintSize="1048,1868.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="ca52426a-8382-49c1-be37-0d1ea7ba64fe" Timeout="[shortWaitTimeInSeconds]" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Civil, Family and Probate Courts Online System" sap:VirtualizedContainerService.HintSize="1048,1870.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="ca52426a-8382-49c1-be37-0d1ea7ba64fe" Timeout="[shortWaitTimeInSeconds]" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,1628.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,1630.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -146,7 +145,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <ui:Activate ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate Window" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Activate_1">
+                <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate Window" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Activate_1">
                   <ui:Activate.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="68c87d91-6246-4772-a6df-b367dfbb7ccc" InformativeScreenshot="364bd67dc547443612f7fd1125004f59" Selector="&lt;wnd app='chrome.exe' cls='Chrome*WidgetWin*1*' title='*Chrome' /&gt;&lt;ctrl role='document' /&gt;" TimeoutMS="3000">
                       <ui:Target.WaitForReady>
@@ -175,14 +174,7 @@
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Clicking download icon&quot;]" />
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Download Icon" sap:VirtualizedContainerService.HintSize="952,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ca52426a-8382-49c1-be37-0d1ea7ba64fe" Timeout="[shortWaitTimeInSeconds]" Version="V4">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://www2.miamidadeclerk.gov/ocs/ImgViewerWF.aspx?QS=B6%2f9EwnZlIiih%2bgqiU8rawLJW%2bj4E30XGWoN6L%2b82TkvBL%2frol0BhYGoQ43KlPmpxsmJ%2fJPklgxP1uyumtRbB3JGap3EECYeYRIM5srJBl%2ffCPvvWnNabNur7a3W%2fBMfu5zOgUKYi7kloxFCGK%2fHKcxp0UZFvqn5rZRrcbqlANl5%2b1ZAR46fqaWu%2bwteyV9O7t3MMx8%2fPq6YSK9XCI6MiMoITOqvz3zmE7TKZYZhsp6ZalDIuDBljR8C0mVsb8eTRJ2TR5bdVfc%2f4UG3OIS7Uj1ChiFHcYqo%2fc8mAvQ3KWWjQkHB4GaDMfLd2KYoNGV8" CVScreenId="c3bf7e26-190f-43d6-ad73-aaa7376f2a74" CvElementArea="1723, 281, 27, 29" CvType="Icon" DesignTimeRectangle="1721, 281, 30, 30" DesignTimeScaleFactor="1.25" Guid="75d93225-da0c-4ed9-a335-e55267999e5d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD1SURBVEhL7dVBCoJAFIDhztQiEoo6RhC0iUTqKlEQFu2joDpDiEaFRt7FE7x6wUTpG2aekUXM4tuMM+8HHbBUrljwDSZcGBMuDDs8HI3BD/YZuE7tl2GH15stJEmSgevUfhkTVvr/sO0MYOJOHy5xTIZx/Xlfz+mT8wRl2Ko34XA8kTEZPwju56h5gtar5sQxSs1I0/7GGMehVEzQjSL25ZLFOVHEDqN0nBtFucJIxHeeRz5XyR2u1hrgzubkMx25w+9ShlvtDnRthw3PUfMEZTiMzi8XSVcYRuQ8QRleLFe3i5T98avgOWqe8Lvf+FNMuCAWXAHFKMB4Ik2rkAAAAABJRU5ErkJggg==" InformativeScreenshot="9bfb0fd0cf0b16de1c55b3b9091a335d.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Civil, Family and Probate Courts Online System - Google Chrome' /&gt;" SearchSteps="CV" Version="V4" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
-                      <uix:Target DesignTimeRectangle="1768, 283, 26, 26" FullSelectorArgument="&lt;ctrl name='Civil, Family and Probate Courts Online System' role='document' /&gt;&lt;ctrl name='Image' role='document' /&gt;&lt;ctrl name='PDFHandler.ashx' role='document' /&gt;&lt;ctrl name='Print' role='push button' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;" Guid="50cb508e-d76e-463e-b13b-39158863af74" SearchSteps="Selector" />
-                      <uix:Target CVScreenId="c3bf7e26-190f-43d6-ad73-aaa7376f2a74" CvElementArea="1815, 281, 23, 31" CvType="Icon" DesignTimeRectangle="1811, 281, 30, 30" Guid="267c83dd-19b6-4c75-8f77-61d721442ed3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEkSURBVEhLYzAys/w/EHjUYrrhUYvphoeexc2t7f83b9n6v6mlDas8IUyWxTV1Df8/fvwIxyVlFVjV4cNkWTx1+gwUiydNmYpVHT5MlsX+waH/X758Cbb0+fPn/739A7Gqw4fJjmNvv8D/yWkZ/z18/LHKE8JkW0wpJtvi4PDI/y1tHf+DwyKwyhPCZFmcmpGFkrjiEpOxqsOHybJ4xqzZKBaDUjk2dfgwVXycmJKGVR0+THYcF5aUgfNvXkERVnlCmGyLKcUUWRwSEYVVnBhMlsWgkuvBw4fg+L3/4AG4MMGmDh8my+JpM2aiJK4Jk6ZgVYcPk2VxdV09isXlVTVY1eHDZMfxosVL/x88dPj/3PkLsMoTwhQlLkrwqMV0wwNkseV/AA59DDOY0ONiAAAAAElFTkSuQmCC" SearchSteps="CV" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
+                <uix:TargetAnchorable BrowserURL="https://www2.miamidadeclerk.gov/ocs/ImgViewerWF.aspx?QS=B6%2f9EwnZlIiih%2bgqiU8rawLJW%2bj4E30XGWoN6L%2b82TktkbkQ3yaIt30wcqv8LxJx9N9pvweU%2bs2T5%2f%2bXfDluK%2fLwGOvxs0sLQYWkILeNwe3Gb%2fo0GQf1Bc9NkLY6h3WWBRSxJnSHZC5JoQMG4yXKiZcoicTLWC%2fvYzmdmUBswbhE9bLKby0CVk%2f8kXnisasXIjcqOWy0BZZzXCDVHMAEbnxXIkMarJ3OlzXFbeiY48W7jqJqZAigD950WzRmuIdAUanP06xhSep5vk%2fmVgjkn9JJfD%2b%2fnIYly%2bWXeBnbPaijEY4798fQPw%3d%3d" CVScreenId="bb43c9cb-eccf-46bd-9567-61c7c5048328" DesignTimeRectangle="1716, 275, 41, 41" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='*' role='document' /&gt;&lt;ctrl name='Image' role='document' /&gt;&lt;ctrl name='*' role='document' /&gt;&lt;ctrl name='Download' role='push button' /&gt;&lt;ctrl role='grouping' idx='*' /&gt;" Guid="382c595a-c114-40e1-964b-d890c70d1dc1" InformativeScreenshot="8376fa13925051744efea3044e404092.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_*' title='*' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">

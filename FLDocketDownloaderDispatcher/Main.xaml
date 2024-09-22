@@ -46,6 +46,7 @@
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -109,9 +110,10 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
       <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID1}" sap2010:Annotation.AnnotationText="[Process title : FLDocketDownloaderDispatcher]&#xA;[Developer : MasterOfLogic &amp; Audery]&#xA;[Process description : This program reads and excel file which would be placed in a target loaction , then loads the execl data into a queue ]&#xA;[Additional information (e.g., masteroflogic.mol@gmail.com)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="908.8,571.2" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID1}" sap2010:Annotation.AnnotationText="[Process title : FLDocketDownloaderDispatcher]&#xA;[Developer : MasterOfLogic &amp; Audery]&#xA;[Process description : This program reads and excel file which would be placed in a target loaction , then loads the execl data into a queue ]&#xA;[Additional information (e.g., masteroflogic.mol@gmail.com)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1188.8,571.2" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,7 +197,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </State>
-    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process. Read the excel into a table" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="673.6,3496.8" sap2010:WorkflowViewState.IdRef="State_2">
+    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process. Read the excel into a table" DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="310.4,149.6" sap2010:WorkflowViewState.IdRef="State_2">
       <State.Entry>
         <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="628.8,3076.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -420,7 +422,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <State.Transitions>
-        <Transition DisplayName="Successful" sap:VirtualizedContainerService.HintSize="516,768.8" sap2010:WorkflowViewState.IdRef="Transition_2">
+        <Transition DisplayName="Successful" sap:VirtualizedContainerService.HintSize="695.2,1896.8" sap2010:WorkflowViewState.IdRef="Transition_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Int32 x:Key="SrcConnectionPointIndex">67</x:Int32>
@@ -433,17 +435,17 @@
             <x:Reference>__ReferenceID0</x:Reference>
           </Transition.To>
           <Transition.Action>
-            <Sequence sap:VirtualizedContainerService.HintSize="416,388.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <Sequence sap:VirtualizedContainerService.HintSize="595.2,1516.8" sap2010:WorkflowViewState.IdRef="Sequence_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Comment DisplayName="Comment (default transition)" sap:VirtualizedContainerService.HintSize="353.6,107.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Default transition is picked up if there are no errors during initialization" />
-              <If sap2010:Annotation.AnnotationText="If files were moved to queue sucessfully" Condition="[Not String.IsNullOrEmpty(stringListOfFilesMovedToQueue)]" sap:VirtualizedContainerService.HintSize="353.6,100.8" sap2010:WorkflowViewState.IdRef="If_16">
+              <ui:Comment DisplayName="Comment (default transition)" sap:VirtualizedContainerService.HintSize="532.8,107.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Default transition is picked up if there are no errors during initialization" />
+              <If sap2010:Annotation.AnnotationText="If files were moved to queue sucessfully" Condition="[Not String.IsNullOrEmpty(stringListOfFilesMovedToQueue)]" sap:VirtualizedContainerService.HintSize="532.8,474.4" sap2010:WorkflowViewState.IdRef="If_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
@@ -467,7 +469,7 @@
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Send_Email_Using_Outlook - Invoke Workflow File (Send_Email_Using_Outlook.xaml)" sap:VirtualizedContainerService.HintSize="334.4,174.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="ReusablesComponents\Send_Email_Using_Outlook.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_MailSubject">[Config("ProcessName").ToString() +" Error Notification"]</InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="in_MailMessage">["The data in the following files have been pushed to the queue ["+ stringListOfFilesMovedToQueue+"]"]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="in_MailMessage">[transactionCount.ToString() +" cases have been moved to the queue for processing. The cases originated from the files : ["+ stringListOfFilesMovedToQueue+"]"]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_TitleOfEmail">[Config("ProcessName").ToString() +" Notification : Data moved to queue successfully "]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_MailRecipientsTo">[Config("report_Email").ToString()]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="in_MailRecipientsCc">[Config("report_EmailCc").ToString()]</InArgument>
@@ -503,26 +505,26 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <If sap2010:Annotation.AnnotationText="If files were Not moved to queue sucessfully" Condition="[Not String.IsNullOrEmpty(stringListOfFilesWithErrors)]" sap:VirtualizedContainerService.HintSize="353.6,92" sap2010:WorkflowViewState.IdRef="If_15">
+              <If sap2010:Annotation.AnnotationText="If files were Not moved to queue sucessfully" Condition="[Not String.IsNullOrEmpty(stringListOfFilesWithErrors)]" sap:VirtualizedContainerService.HintSize="532.8,846.4" sap2010:WorkflowViewState.IdRef="If_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="499.2,548.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch sap2010:Annotation.AnnotationText="Send mail files not moved" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="353.6,79.2" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                    <TryCatch sap2010:Annotation.AnnotationText="Send mail files not moved" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,460" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
