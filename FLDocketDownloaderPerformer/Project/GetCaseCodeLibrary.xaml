@@ -1,0 +1,169 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LookUpDocketDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="caseCodeLibrary" Type="OutArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>859.2,1247.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>LookUpDocketDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LookUpDocketDetails" sap:VirtualizedContainerService.HintSize="636.8,1182.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;getting case code library&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="OCS Search" sap:VirtualizedContainerService.HintSize="574.4,919.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="35e060e0-bfea-4e44-9752-3aea9e950a45" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540.8,679.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:List(x:String)" Name="items" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetAttributeGeneric x:TypeArguments="scg:List(x:String)" Attribute="items" DisplayName="Get Attribute [Case Codes]" sap:VirtualizedContainerService.HintSize="478.4,240" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Result="[items]" ScopeIdentifier="35e060e0-bfea-4e44-9752-3aea9e950a45" Version="V4">
+              <uix:NGetAttributeGeneric.Target>
+                <uix:TargetAnchorable BrowserURL="https://www2.miamidadeclerk.gov/ocs/Search.aspx?AspxAutoDetectCookieSupport=1" CVScreenId="c8f07523-765b-4caf-aa99-a54bd5dbadea" DesignTimeRectangle="724, 584, 342, 39" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='localCaseCodesSelect_localCaseContent' tag='SELECT' aaname='Case Codes' /&gt;" Guid="752772bd-3b0c-4803-88ba-79456200db62" InformativeScreenshot="7d6776939a6e3557979fda2585bcf9bc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='OCS Search' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NGetAttributeGeneric.Target>
+            </uix:NGetAttributeGeneric>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="scg:List(x:String)">[items]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="scg:List(x:String)">[items.Where(Function(x) Not x.ToLower().Replace(" ",String.Empty).Contains("casecodes")).ToList()]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[caseCodeLibrary]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[items.ToDictionary(Function(x) x.Split("-"c)(0).Trim().ToUpper(),Function(y) CObj(y))]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[caseCodeLibrary.Keys.Count.ToString()+ &quot; items in case code library&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b2ade817355f0058791b1433acc0a16e.jpg" Selector="&lt;html app='chrome.exe' title='OCS Search' /&gt;" Title="OCS Search" Url="https://www2.miamidadeclerk.gov/ocs/Search.aspx?AspxAutoDetectCookieSupport=1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

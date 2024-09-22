@@ -12,3 +12,31 @@
 6.) Download Required Documents
 
 7.) Go back to search page
+
+----------------------------------------
+Deployment Requirement :
+----------------------------------------
+Please ensure you have 
+
+1.) You have Registered On https://www2.miamidadeclerk.gov/Usermanagementservices
+
+2.) Shared Folder in your Ochestrator
+
+3.) A Uipath storage bucket called FLDocketDownloader_Bucket in the Shared Folder of the Orchestrator
+
+4.) A credential Asset called FLDocketDownloaderCredential in the Shared Folder of the Orchestrator. This credential should hold your log in details from (1)
+
+5.) If you are outside the U.S pleasee ensure your bot machine has a VPN which is connected to a US Server
+
+6.) Dispacther and Performer should be deployed into the Shared Folder of the Orchestrator.
+----------------------------------------
+Test The Process :
+----------------------------------------
+
+7.) Dispacther must be executed before performer
+
+8.)SampleInput.xlsx must be uploaded into storage bucket
+
+
+
+
